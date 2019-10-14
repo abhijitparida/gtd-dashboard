@@ -1,0 +1,18 @@
+* {
+  cursor: default !important;
+}
+
+a, button {
+  cursor: pointer !important;
+}
+
+u {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
+
+a.nes-btn {
+  height: 150px;
+  width: 200px;
+  padding: 50px 10px;
+}
