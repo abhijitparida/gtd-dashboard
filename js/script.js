@@ -1,11 +1,10 @@
 const today = new Date();
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-let day = days[today.getDay()];
-if (today.getDay() === 0) day = `<u>${day}</u>`;
-let date = `${today.getDate()} ${months[today.getMonth()]}`;
-if (today.getDate() === 1) date = `<u>${date}</u>`;
-const title = `${day}, ${date}`;
+const day = days[today.getDay()];
+const date = `${today.getDate()} ${months[today.getMonth()]}`;
+const underline = string => `<u>${string}</u>`;
+const title = `${today.getDay() === 0 ? underline(day) : day}, ${today.getDate() === 1 ? underline(date) : date}`;
 document.getElementById('title').innerHTML = title;
 
 const keep = 'https://keep.google.com';
